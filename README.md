@@ -59,7 +59,7 @@ El *dashboard* en Power BI, alojado en la pestaña **"Analisis defunciones 0-14 
 
 La pregunta hipótesis que guió el análisis fue: **¿Existe una correlación entre las defunciones por accidentes (Códigos CIE10: S99 - T98) y el sexo de los niños de entre 0 y 14 años?**
 
-![Gráfico de Recuento de Defunciones por Mes y Año](docs/img/recount_defunciones.png)
+![Gráfico de Recuento de Defunciones por Mes y Año](def_ninos.png)
 
 Mediante el procesamiento en SQL y los cálculos de tasas en Python, se concluyó:
 
