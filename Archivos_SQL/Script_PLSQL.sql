@@ -1,7 +1,7 @@
 /* =========== KPI 1 ============*/
 /*---------- Defunciones por sexo -------------------*/
 
-/* DECLARE
+DECLARE
     CURSOR C_DEFUNCIONES_POR_SEXO IS
         SELECT 
             SEXO_NOMBRE, 
@@ -31,14 +31,13 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('-----------------------------------------------------------------------------------------------------');
     END LOOP;
     CLOSE C_DEFUNCIONES_POR_SEXO;
-END; */
-
+END; 
 
 
 /* =========== KPI 2 ============*/
 /*-----------Edad promedio de defunciones por region-----------------*/
 
-/* DECLARE
+DECLARE
     CURSOR C_EDAD_PROMEDIO_REGION IS
         SELECT R.REGION, TRUNC(AVG(P.EDAD)) AS EDAD_PROMEDIO
         FROM PACIENTE P
@@ -65,12 +64,12 @@ END; */
             DBMS_OUTPUT.PUT_LINE('------------------------------------------------------------------------------------------------------');
     END LOOP;
     CLOSE C_EDAD_PROMEDIO_REGION;
-END; */
+END; 
 
 /* =========== KPI 3 ============*/
 /*--------------Desviacion estandar de la edad por causa principal de defuncion---------------*/
 
-/* DECLARE
+DECLARE
     CURSOR C_DESVIACION_EDAD IS
         SELECT
             DC1.GLOSA_CAPITULO_DIAG1 AS GLOSA_CAPITULO,
@@ -103,12 +102,12 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('----------------------------------------------------------');
     END LOOP;
     CLOSE C_DESVIACION_EDAD;
-END; */
+END; 
 
 /* =========== KPI 4 ============*/
 /*-----------MES CON MAS DEFUNCIONES POR A�O (2023 Y 2024) -----------------*/
 
-/*DECLARE
+DECLARE
     CURSOR C_MAX_DEFUNCIONES_MES IS
         WITH DEFUNCIONES_POR_MES AS (
             SELECT
@@ -158,12 +157,12 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('----------------------------------------------------');
     END LOOP;
     CLOSE C_MAX_DEFUNCIONES_MES;  
-END; */
+END; 
 
 /* =========== KPI 5 ============*/
 /*-----------TOP 3 DE CAUSAS DE DEFUNCION POR REGION  -----------------*/
 
-/* DECLARE
+DECLARE
     CURSOR C_TOP3_CAUSAS_REGION IS
         WITH CAUSASPORREGION AS (
             SELECT
@@ -218,11 +217,11 @@ BEGIN
     END LOOP;
     CLOSE C_TOP3_CAUSAS_REGION;
     DBMS_OUTPUT.PUT_LINE('----------------------------------------------------');
-END; */
+END;
 
 /* =========== KPI 6 ============*/
 /*-----------TOP 3 DE CAUSAS DE DEFUNCION POR REGION  -----------------*/
-/* DECLARE
+DECLARE
     CURSOR C_VARIACION_MENSUAL IS
         WITH DEFUNCIONES_POR_MES AS (
             SELECT
@@ -276,12 +275,12 @@ BEGIN
     CLOSE C_VARIACION_MENSUAL;
     
     DBMS_OUTPUT.PUT_LINE('----------------------------------------------------');
-END; */
+END;
 
 /* =========== KPI 7 ============*/
 /*-----------PROPORCION(PORCENTUAL) DE LUGAR Y CAUSA DE DEFUNCION, POR REGION -----------------*/
 
-/*DECLARE
+DECLARE
     CURSOR C_PROPORCION IS
         WITH DEFUNCIONES_POR_LUGAR AS (
             SELECT
@@ -345,4 +344,5 @@ BEGIN
     CLOSE C_PROPORCION;
     
     DBMS_OUTPUT.PUT_LINE('----------------------------------------------------------');
-END;*/
+
+END;
